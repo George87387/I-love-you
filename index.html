@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Untuk Kamu</title>
+    <style>
+        body {
+            background: linear-gradient(135deg, #111, #2c2c2c);
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .letter-container {
+            background: #fff;
+            max-width: 650px;
+            padding: 50px 60px;
+            border-radius: 16px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+            animation: fadeIn 1.8s ease;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: normal;
+            letter-spacing: 2px;
+            margin-bottom: 30px;
+            color: #1a1a1a;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #2a2a2a;
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            margin-top: 35px;
+            text-align: right;
+            font-style: italic;
+            color: #444;
+        }
+
+        .divider {
+            width: 60px;
+            height: 2px;
+            background: #c8a951;
+            margin: 30px auto;
+            border-radius: 2px;
+        }
+
+        .btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 12px 30px;
+            background: transparent;
+            color: #1a1a1a;
+            border: 1.5px solid #c8a951;
+            border-radius: 30px;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: #c8a951;
+            color: white;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0; transform: translateY(25px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+    </style>
+</head>
+<body>
+
+    <div class="letter-container">
+        <h1>Untuk Kamu</h1>
+
+        <p>
+            Aku menulis ini bukan sekadar karena rindu, tapi karena hatiku belum pernah benar-benar pergi darimu.
+            Aku sadar, perpisahan kita dulu banyak terjadi karena kesalahanku — karena egoku, karena caraku mencintai yang belum dewasa.
+        </p>
+
+        <p>
+            Seiring waktu, aku belajar.
+            Aku belajar merendahkan ego, belajar memahami, dan belajar mencintai dengan cara yang lebih lembut dan tulus.
+            Perasaan ini tidak hilang — hanya kusimpan, karena aku tahu kembali bukanlah hal yang mudah.
+        </p>
+
+        <p>
+            Namun dari semua orang yang kutemui, hanya satu yang tetap tinggal di hatiku.
+            Kamu adalah seseorang yang istimewa, dan sampai hari ini, tidak ada yang mampu menggantikanmu.
+        </p>
+
+        <p>
+            Jika masih ada sedikit ruang di hatimu, izinkan aku memperjuangkanmu kembali.
+            Bukan untuk mengulang luka, tapi untuk menulis cerita yang lebih baik, lebih indah, dan lebih penuh ketenangan.
+        </p>
+
+        <p>
+            Apapun jawabanmu, aku akan menghormatinya.
+            Tetapi dengan seluruh ketulusan, aku ingin memperbaiki apa yang pernah rusak dan menjaga apa yang pernah kita bangun.
+        </p>
+
+        <div class="divider"></div>
+
+        <div class="signature">
+            Dengan seluruh ketulusan,<br>
+            <strong>[Namamu]</strong>
+        </div>
+
+        <button class="btn" onclick="sendToWhatsApp()">
+            Kirim Jawaban ke WhatsApp
+        </button>
+    </div>
+
+    <script>
+        function sendToWhatsApp() {
+            const phoneNumber = "62859196149742"; // Ganti dengan nomor WhatsApp kamu (format 628...)
+            const message = `Aku sudah membaca suratmu.
+            
+Jawabanku adalah: `;
+            const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+            window.open(url, "_blank");
+        }
+    </script>
+
+</body>
+</html>
